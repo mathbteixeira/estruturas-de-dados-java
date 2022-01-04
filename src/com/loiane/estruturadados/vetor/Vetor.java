@@ -40,6 +40,20 @@ public class Vetor {
         return false;
     }
 
+    public void adiciona(int posicao, String elemento) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
+            throw new IllegalArgumentException("Posição inválida");
+        }
+
+        // mover todos os elementos
+        for (int i = this.tamanho - 1; i >= posicao; i--) {
+            this.elementos[i+1] = this.elementos[i];
+        }
+
+        this.elementos[posicao] = elemento;
+        this.tamanho++;
+    }
+
     public String busca(int posicao) {
         // Posições válidas: 0 até tamanho
         if (!(posicao >= 0 && posicao < tamanho)) {
