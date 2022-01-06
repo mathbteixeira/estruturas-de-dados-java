@@ -1,11 +1,11 @@
 package com.loiane.estruturadados.vetor;
 
-public class VetorGenerico {
+public class VetorObject {
 
     private Object[] elementos;
     private int tamanho; // controla o tamanho real do Vetor
 
-    public VetorGenerico(int capacidade) {
+    public VetorObject(int capacidade) {
         this.elementos = new Object[capacidade];
         this.tamanho = 0;
     }
