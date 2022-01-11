@@ -73,6 +73,25 @@ public class Lista<T> {
         return busca(elemento) > -1;
     }
 
+    public int ultimoIndice(T elemento) {
+        /* int ultimaPosicao = -1;
+        for (int i = 0; i < this.tamanho; i++) {
+            if (this.elementos[i].equals(elemento)) {
+                ultimaPosicao = i;
+            }
+        }
+        return ultimaPosicao; */
+
+        // Para o algortimo ser mais performático basta
+        // iterar iniciando da última posição
+        for (int i = this.tamanho - 1; i >= 0; i--) {
+            if (this.elementos[i].equals(elemento)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public void remove(int posicao) {
         if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
