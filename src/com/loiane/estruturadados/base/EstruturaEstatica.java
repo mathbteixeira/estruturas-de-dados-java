@@ -2,8 +2,8 @@ package com.loiane.estruturadados.base;
 
 public class EstruturaEstatica<T> {
 
-    private T[] elementos;
-    private int tamanho;
+    protected T[] elementos;
+    protected int tamanho;
 
     public EstruturaEstatica(int capacidade) {
         elementos = (T[]) new Object[capacidade];
@@ -39,7 +39,7 @@ public class EstruturaEstatica<T> {
         this.tamanho++;
     }
 
-    private void aumentaCapacidade() {
+    protected void aumentaCapacidade() {
         if (this.tamanho == this.elementos.length) {
             T[] elementosNovos = (T[]) new Object[this.elementos.length*2];
             for (int i = 0; i < this.elementos.length; i++) {
