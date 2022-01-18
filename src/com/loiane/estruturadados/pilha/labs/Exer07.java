@@ -46,7 +46,7 @@ public class Exer07 {
 
     public static String decimalQualquerBase(int numero, int base) {
         if (base > 16) {
-            throw new IllegalArgumentException()
+            throw new IllegalArgumentException();
         }
         Stack<Integer> stack = new Stack<>();
         String numBase = "";
