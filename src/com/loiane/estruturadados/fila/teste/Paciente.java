@@ -1,6 +1,6 @@
 package com.loiane.estruturadados.fila.teste;
 
-public class Paciente implements Comparable<Paciente> {
+public class Paciente /*implements Comparable<Paciente>*/ {
     private String nome;
     private int prioridade;
 
@@ -28,7 +28,7 @@ public class Paciente implements Comparable<Paciente> {
         this.prioridade = prioridade;
     }
 
-    @Override
+    /*@Override
     public int compareTo(Paciente o) {
         if (this.prioridade > o.getPrioridade()) {
             return 1;
@@ -36,7 +36,7 @@ public class Paciente implements Comparable<Paciente> {
             return -1;
         }
         return 0;
-    }
+    }*/
 
     @Override
     public String toString() {
